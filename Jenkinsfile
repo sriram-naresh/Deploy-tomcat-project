@@ -25,10 +25,11 @@ pipeline{
                 }
             }
         }
-        stage("Docker build"){
+        stage("Deploy"){
             steps{
                 script{
-                    sh 'docker build -t java-image . '
+                    sh """
+                    cp /webapp/target/webapp.war /usr/share/tomcat/webapps/ROOT.war
                 }
             }
         }
