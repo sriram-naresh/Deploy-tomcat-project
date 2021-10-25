@@ -29,7 +29,7 @@ pipeline{
             steps{
                 script{
                     sh """
-                    cp /webapp/target/webapp.war /usr/share/tomcat/webapps/ROOT.war
+                    sudo cp -rf /var/lib/jenkins/workspace/tomcat-project/webapp/target/webapp.war  /usr/share/tomcat/webapps/ROOT
                     """
                 }
             }
