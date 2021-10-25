@@ -30,6 +30,7 @@ pipeline{
                 script{
                     sh """
                     cp /webapp/target/webapp.war /usr/share/tomcat/webapps/ROOT.war
+                    """
                 }
             }
         }
